@@ -1,34 +1,19 @@
-// Code your solutions in this file
-while ([condition]) {
-    [loop body]
+const countDown = (number) => {
+  let no = number;
+  while (no >= 0){
+      console.log(no--)
   }
-  const gifts = ["teddy bear", "drone", "doll"];
-
-function wrapGifts(gifts) {
-  let i = 0; // the initialization moves OUTSIDE the body of the loop!
-  while (i < gifts.length) {
-    console.log(`Wrapped ${gifts[i]} and added a bow!`);
-    i++; // the iteration moves INSIDE the body of the loop!
-  }
-
-  return gifts;
 }
-
-wrapGifts(gifts);
-// LOG: Wrapped teddy bear and added a bow!
-// LOG: Wrapped drone and added a bow!
-// LOG: Wrapped doll and added a bow!
-// => ["teddy bear", "drone", "doll"]
-function plantGarden() {
-    let keepWorking = true;
-    while (keepWorking) {
-      chooseSeedLocation();
-      plantSeed();
-      waterSeed();
-      keepWorking = checkForMoreSeeds();
-    }
+function writeCards(names, content){
+  const messages = []
+  for(let x = 0; x < names.length; x++){
+      const message = `Thank you, ${names[x]}, for the wonderful ${content} gift!`
+      messages.push(message)
   }
-  let countup = 0;
-while (countup < 10) {
-  console.log(countup++);
+  // names.forEach((name) => {
+  //     let message = `Thank you, ${names}, for the wonderful ${content} gift!`
+  //     messages.push(message)
+  // });
+  return messages;
 }
+console.log(writeCards(['Chalrs', 'Scah'], "crazy"))
